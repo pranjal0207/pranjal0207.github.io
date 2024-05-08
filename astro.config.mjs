@@ -8,7 +8,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pranjal0207.github.io/',
-  base: 'pranjal0207.github.io',
+  base: '',
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     remarkPlugins: [remarkReadingTime],
