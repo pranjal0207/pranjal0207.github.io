@@ -169,8 +169,11 @@
   }
 
   .sub-title {
-    @apply text-base font-bold mb-4;
-    color: #93e1d4;
+    @apply text-base font-bold mb-4 text-accent;
+  }
+
+  .inline-color {
+    @apply text-accent;
   }
 
   hr {

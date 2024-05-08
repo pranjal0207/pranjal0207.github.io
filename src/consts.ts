@@ -16,11 +16,11 @@ type SocialLink = {
 
 export const siteConfig: Config = {
   title: "Pranjal Rane",
-  description: "",
+  description: "Experienced Full Stack Software Engineer, with profound expertise in advanced cloud technologies specializing in scalable, production-grade software solutions with AI integration. Skilled in optimizing system efficiency and user engagement within both corporate and startup environments.",
   lang: "en-GB",
   profile: {
     author: "Pranjal Rane",
-    description: "your bio description"
+    description: "Experienced Full Stack Software Engineer, with profound expertise in advanced cloud technologies specializing in scalable, production-grade software solutions with AI integration. Skilled in optimizing system efficiency and user engagement within both corporate and startup environments."
   }
 }
 
