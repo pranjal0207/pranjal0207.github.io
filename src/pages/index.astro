@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import PostPreview from "@/components/blog/PostPreviewB";
+import SocialMediaLinks from "@/components/SocialMediaLinks";
+import { getAllPosts, sortMDByDate, sortMDByPinned } from "@/utils";
+import { WORK_EXPERIENCE, TECHNICAL_SKILLS } from 'src/consts';
+
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+const allPostsByPinned = sortMDByPinned(allPostsByDate);
+
+const tech: Array<{ title: string; desc: string }> = [
+	{
+		title: "Programming Languages",
+		desc: "Java, Python, JavaScript, C/C++, C#, Dart (Flutter), HTML/CSS, PHP, SQL, Typescript",
+	},
+	{
+		title: "Frameworks & Libraries",
+		desc: "ReactJs, Node.js, Flask, Django, Express.js, MapReduce, Hadoop, ElasticSearch, Spark, GraphQL",
+	},
+	{
+		title: "Database Technologies",
+		desc: "MySQL, SQLite, MongoDB, Amazon DynamoDB, Databricks (Data Lakehouse), Amazon RDS, Spark",
+	},
+	{
+		title: "Cloud Technologies",
+		desc: "AWS (SageMaker, Lamda, DynamoDB, EC2, S3, Route53, IAM & more), Azure Cloud (Azure OpenAI)",
+	},
+	{
+		title: "Machine Learning",
+		desc: "PyTorch, TensorFlow, Keras, Sklearn, Pandas, Matplotlib, Hugging Face, GPT, Langchain, NLTK, spaCy",
+	},
+	{
+		title: "Data Science",
+		desc: "A/B testing, Statistics, Classification, Unsupervised Learning, Time Series Analysis, Hypothesis Testing",
+	},
+	{
+		title: "Tools & Technologies",
+		desc: "Git, Postman, Hadoop, MapReduce, Docker, MuleSoft, Kafka, Jenkins, Palantir Foundry, Kubernetes",
+	},
+	{
+		title: "Functional Skills",
+		desc: "Software Development, Web and Cloud Development, CI/CD, Agile-Scrum",
+	}
+];
+
+---
+
+<BaseLayout title="Home">
+	<section>
+		<h1 class="title">Hello World! I'm Pranjal Rane 👋</h1>
+		
+		<p class="mb-4 sm:mb-8">
+			Let's `git commit` to some introductions!
+			<br><br>	
+			As a Full Stack Software Engineer, I specialize in weaving AI with cloud technologies to architect software that’s not only smart but also scales beautifully. I’m all about creating efficient, user-friendly systems—without any help from ChatGPT, I assure you! When not immersed in code, I’m likely plotting my next tech breakthrough. Ready to build something great? Let’s make software that’s worth tweeting about!
+		</p>
+
+		<p class="mb-4 sm:mb-8">Ps. No ChatGPT was harmed in the making whatsoever 😆</p>
+
+		<div>
+			<span>You can find me on: </span>
+			<SocialMediaLinks/>
+		</div>
+	</section>
+
+	<section class="mt-16">
+		<h2 class="title">Work Experience</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				WORK_EXPERIENCE.map(({ id, company, position }) => (
+					<li>
+						• <p class="inline-block sm:mt-2"> {position} @ <u><a href={"/work/#"+id.toString()}>{company}</a></u></p>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	<section class="mt-16">
+			<h2 class="title">Technical Skills</h2>
+			<ul class="space-y-4 sm:space-y-2">
+				{
+					TECHNICAL_SKILLS.map(({ title, desc }) => (
+						<li>
+							<u>{title}:</u>
+							<p class="inline-block sm:mt-2">{desc}</p>
+						</li>
+					))
+				}
+			</ul>
+	</section>
+</BaseLayout>
