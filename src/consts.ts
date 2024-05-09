@@ -63,6 +63,10 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   {
     title: "Projects",
     path: '/projects'
+  },
+  {
+    title: "Resume",
+    path: "https://drive.google.com/file/d/1mQTTGqSfRKdIIJGfvzj83txrzfduLVes/view?usp=drive_link"
   }
 ];
 

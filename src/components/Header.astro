@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.astro';
 import { siteConfig, NAV_LINKS } from '../consts';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import Resume from './Resume.astro';
 
 const url = new URL(Astro.request.url);
 ---
@@ -22,6 +23,14 @@ const url = new URL(Astro.request.url);
 		>
 		<div class="space-y-1 px-2 pb-3 pt-2 sm:flex sm:px-0 sm:py-0 sm:space-y-0 sm:space-x-2">
 			{NAV_LINKS.map(nav => (
+				nav.title === "Resume"? (
+					<Resume class="block py-2 sm:py-0" 
+					href={nav.path} 
+					title={nav.title}
+					aria-current={url.pathname === nav.path ? "page" : false}
+					data-astro-prefetch></Resume>
+
+				) : (
 				<HeaderLink 
 					class="block py-2 sm:py-0" 
 					href={nav.path} 
@@ -29,6 +38,7 @@ const url = new URL(Astro.request.url);
 					aria-current={url.pathname === nav.path ? "page" : false}
 					data-astro-prefetch
 				>{nav.title}</HeaderLink>
+				)
 			))}
 		</div>
 	</nav>
