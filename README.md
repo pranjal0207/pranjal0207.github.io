@@ -14,7 +14,7 @@
   </p>
 </div>
 
-![demo-preview](/assets/demo2.png)
+![demo-preview](./assets/demo.png)
 
 # Table of Contents
 1. [Demo](#demo)
