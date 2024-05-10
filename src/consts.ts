@@ -96,7 +96,7 @@ export const WORK_EXPERIENCE: Array<{ id:number, position: string; company: stri
         points: [
           "Developed and deployed over 10 RESTful APIs using Java with Spring Boot, which enhanced application efficiency by 20% and supported scalable functionality in key web services",
           "Developed custom middleware with Spring Boot to synchronize data between SQL-based legacy systems and Amazon DynamoDB, ensuring seamless data transfer and integration",
-          "Reduced response times & transaction speed by 15% by optimizing Amazon DynamoDB queries and backend logic in Java",
+          "Enhanced system scalability by 15% by integrating RabbitMQ with Spring Boot microservices for efficient asynchronous processing",
           "Designed and implemented comprehensive unit and integration tests using JUnit and Mockito, covering edge cases, asynchronous operations, and API endpoint reliability, which successfully achieved code coverage of 95%",
           "Improved frontend performance by implementing advanced React techniques (Redux & Hooks) and optimizing Typescript code"
           
