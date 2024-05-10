@@ -66,7 +66,7 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   },
   {
     title: "Resume",
-    path: "https://drive.google.com/file/d/1EH9Ylcb-m08eEP_tVmF6A29nNE701zCH/view?usp=sharing"
+    path: "https://drive.google.com/file/d/1Mk5d3NgTaQsCBzjD2-RZUxAqQ5DWLnkX/view?usp=sharing"
   }
 ];
 
