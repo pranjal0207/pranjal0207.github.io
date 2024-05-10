@@ -66,7 +66,7 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   },
   {
     title: "Resume",
-    path: "https://drive.google.com/file/d/1mQTTGqSfRKdIIJGfvzj83txrzfduLVes/view?usp=drive_link"
+    path: "https://drive.google.com/file/d/1EH9Ylcb-m08eEP_tVmF6A29nNE701zCH/view?usp=sharing"
   }
 ];
 
@@ -94,12 +94,12 @@ export const WORK_EXPERIENCE: Array<{ id:number, position: string; company: stri
         start: new Date("2023-05-01"),
         end: new Date("2023-08-31"),
         points: [
-            "Developed and deployed over 10 RESTful APIs using the Node.js and Express.js, leading to a 20% enhancement in application efficiency and supporting scalable functionality in key web services",
-            "Developed custom middleware using Node.js and Express.js to synchronize data between SQL-based legacy systems & Amazon DynamoDB, ensuring seamless data transfer and integration",
-            "Collaborated with a team of front-end developers and project managers, resulting in a 15% increase in user experience satisfaction and system reliability through seamless integration of backend APIs with front-end interfaces",
-            "Optimized Amazon DynamoDB queries and Node.js server logic, achieving a 25% reduction in response times and a 15% increase in transaction processing speed, significantly improving backend performance",
-            "Designed and implemented comprehensive unit and integration tests using Jest and Mocha, covering edge cases, asynchronous operations, and API endpoint reliability, which successfully achieved code coverage of 95",
-            "Resolved multiple major technical issues, leading to a 30% increase in system stability and enhancing overall performance"
+          "Developed and deployed over 10 RESTful APIs using Java with Spring Boot, which enhanced application efficiency by 20% and supported scalable functionality in key web services",
+          "Developed custom middleware with Spring Boot to synchronize data between SQL-based legacy systems and Amazon DynamoDB, ensuring seamless data transfer and integration",
+          "Reduced response times & transaction speed by 15% by optimizing Amazon DynamoDB queries and backend logic in Java",
+          "Designed and implemented comprehensive unit and integration tests using JUnit and Mockito, covering edge cases, asynchronous operations, and API endpoint reliability, which successfully achieved code coverage of 95%",
+          "Improved frontend performance by implementing advanced React techniques (Redux & Hooks) and optimizing Typescript code"
+          
         ],
         compnay_link: "https://www.cummins.com/support/digital-products-and-services-support"
     },

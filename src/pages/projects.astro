@@ -14,11 +14,11 @@ import { PROJECTS } from 'src/consts';
         {PROJECTS.map(project => (
             <p>
             <ul class="space-y-4 sm:space-y-2" id={project.id.toString()}> 
-                <li> <h1 class="sub-title">
+                <h1 class="sub-title">
                     {project.title} | 
                     {project.keywords} 
                     {project.github!=null? (
-                        <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub</u></a>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer"> | <u>GitHub </u> </a>
                     ):(
                         <p></p>
                     )}
@@ -27,13 +27,12 @@ import { PROJECTS } from 'src/consts';
                     ):(
                         <p></p>
                     )}
-                    
-                </h1></li>
+                </h1>
 
                 {project.points.map(point => (
                     <li>• {point}</li>
                 ))}
-            </ul> <br></br></p>
+            </ul><br></br></p>
         ))} 
     </p>
     
