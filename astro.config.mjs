@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: 'https://pranjal0207.github.io',
+  site: 'https://www.pranjal0207.github.io',
   integrations: [mdx(), sitemap(), tailwind()],
   markdown: {
     syntaxHighlight: 'shiki',
