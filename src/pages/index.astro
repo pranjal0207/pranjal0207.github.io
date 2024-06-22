@@ -30,7 +30,7 @@ import { getFormattedDate } from 'src/utils/date';
 
 	<section class="mt-16">
 		<h2 class="title">Work Experience</h2>
-		<ul class="space-y-4 sm:space-y-2">
+		<!-- <ul class="space-y-4 sm:space-y-2">
 			{
 				WORK_EXPERIENCE.map(({ id, company, position, start, end }) => (
 					<li>
@@ -44,7 +44,21 @@ import { getFormattedDate } from 'src/utils/date';
 					</li>
 				))
 			}
-		</ul>
+		</ul> -->
+		
+		
+
+		<ol class="relative border-s timeline">                  
+			{
+				WORK_EXPERIENCE.map(({ id, company, position, start, end }) => (
+					<li class="mb-10 ms-4">
+						<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+						<time class="mb-1 text-sm font-normal leading-none timeline-text">{getFormattedDate(start)} - {getFormattedDate(end)}</time>
+						<h3 class="text-lg font-semibold timeline-tex">{position} @ <u><a href={"/work/#"+id.toString()}>{company}</a></u></h3>
+					</li>
+				))
+			}
+		</ol>
 	</section>
 
 	<section class="mt-16">

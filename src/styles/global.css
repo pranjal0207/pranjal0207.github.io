@@ -32,96 +32,7 @@
 
   html body {
     @apply mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-4 md:pt-8 font-mono text-sm font-normal antialiased bg-bgColor text-textColor;
-  }
-
-  /*
-  * CSS for markdown and MDX blog posts
-  */
-
-  .prose-cody blockquote {
-    @apply text-quote border-l-0;
-  }
-
-  .prose-cody a {
-    @apply no-underline;
-  }
-
-  .prose-cody strong {
-    font-weight: 700;
-  }
-
-  .prose-cody :where(code):not(:where([class~=not-prose],[class~=not-prose] *)) {
-    @apply bg-accent !text-surface px-1 py-0;
-  }
-
-  .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before{
-    content: none !important;
-  }
-
-  .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after{
-    content: none !important;
-  }
-
-  .prose-cody hr {
-    border-top-style: dashed;
-    border-top-width: 0.5px;
-    @apply border-accent my-4;
-  }
-  .prose-cody thead {
-    @apply border-b-0;
-  }
-
-  .prose-cody thead th {
-    @apply font-bold border-b border-dashed border-accent;
-  }
-
-  .prose-cody tbody tr {
-    @apply border-b-0;
-  }
-
-  .prose-cody tfoot {
-    @apply font-bold border-t border-dashed border-accent;
-  }
-
-  .prose-cody sup {
-    @apply ms-0.5;
-  }
-
-  .prose-cody sup > a {
-    @apply bg-none;
-  }
-
-  .prose-cody sup > a:hover {
-    @apply text-accent no-underline bg-none;
-  }
-
-  .prose-cody sup > a:before {
-    content: "[";
-    @apply text-accent;
-  }
-
-  .prose-cody sup > a:after {
-    content: "]";
-    @apply text-accent;
-  }
-
-  .prose-cody mark {
-    @apply bg-accent;
-  }
-
-  .prose-cody li::marker {
-    @apply text-accent;
-  }
-
-  .prose-cody table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  /*
-  * ===== END =====
-  */
+  } 
 
   .tag {
     @apply bg-accent px-1 py-0 text-bgColor font-semibold text-sm;
@@ -195,4 +106,13 @@
   .fade-out {
     @apply transition-opacity duration-700 ease-in opacity-0 duration-700;
   }
+
+  .timeline {
+    border-color: var(--theme-accent);
+  }
+
+  .timeline-text {
+    color: var(--theme-text);
+  }
+
 }

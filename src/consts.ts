@@ -72,27 +72,28 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
 
 
 export const WORK_EXPERIENCE: Array<{ id:number, position: string; company: string, start: Date, end: Date, points: Array<string>, compnay_link:string }> = [
-	{
-        id:1,
-        position: "Data Scientist - Intern",
-        company: "Cummins Inc.",
-        start: new Date("2023-09-01"),
-        end: new Date("2024-01-04"),
-        points: [
-            "Developed two Retrieval Augmented Generation (RAG) applications using Langchain, Cosmos DB and Llama and GPT (3.5 & 4); resulting in a 30% improvement in predictive accuracy for HR Chat bot and Global Warranty chat bot usecase",
-            "Designed and managed a data pipeline that processed and cleaned over 1TB of company data, leading to a 25% reduction in data processing time, by implementing data extraction and cleaning techniques like Text Normalization and Regex pattern matching",
-            "Achieved a 15% increase in RAG application efficiency, by prompt engineering and conducting a detailed comparative analysis of fine-tuned Llama and GPT-4 models and selecting the best-performing model for deployment",
-            "Streamlined model deployment and increased accessibility, by using MLflow to host the optimal RAG model and developing callable API with Databricks ML model deployment services",
-            "Addressed and resolved specific use-case limitations, enhancing retriever coverage by 40%, by designing and implementing a custom document retriever that outperformed the existing solution from Hugging Face in handling complex corner cases"
-        ],
-        compnay_link: "https://www.cummins.com/support/digital-products-and-services-support"
-    },
+	// {
+  //       id:1,
+  //       position: "Data Scientist - Intern",
+  //       company: "Cummins Inc.",
+  //       start: new Date("2023-09-01"),
+  //       end: new Date("2024-01-04"),
+  //       points: [
+  //           "Developed two Retrieval Augmented Generation (RAG) applications using Langchain, Cosmos DB and Llama and GPT (3.5 & 4); resulting in a 30% improvement in predictive accuracy for HR Chat bot and Global Warranty chat bot usecase",
+  //           "Designed and managed a data pipeline that processed and cleaned over 1TB of company data, leading to a 25% reduction in data processing time, by implementing data extraction and cleaning techniques like Text Normalization and Regex pattern matching",
+  //           "Achieved a 15% increase in RAG application efficiency, by prompt engineering and conducting a detailed comparative analysis of fine-tuned Llama and GPT-4 models and selecting the best-performing model for deployment",
+  //           "Streamlined model deployment and increased accessibility, by using MLflow to host the optimal RAG model and developing callable API with Databricks ML model deployment services",
+  //           "Addressed and resolved specific use-case limitations, enhancing retriever coverage by 40%, by designing and implementing a custom document retriever that outperformed the existing solution from Hugging Face in handling complex corner cases"
+  //       ],
+  //       compnay_link: "https://www.cummins.com/support/digital-products-and-services-support"
+  //   },
     {
         id:2,
         position: "Software Development Engineer - Intern",
         company: "Cummins Inc.",
         start: new Date("2023-05-01"),
-        end: new Date("2023-08-31"),
+        // end: new Date("2023-08-31"),
+        end: new Date("2024-01-04"),
         points: [
           "Developed and deployed over 10 RESTful APIs using Java with Spring Boot, which enhanced application efficiency by 20% and supported scalable functionality in key web services",
           "Developed custom middleware with Spring Boot to synchronize data between SQL-based legacy systems and Amazon DynamoDB, ensuring seamless data transfer and integration",
