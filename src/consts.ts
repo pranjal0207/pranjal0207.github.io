@@ -14,6 +14,31 @@ type SocialLink = {
   link: string;
 }
 
+type WorkExperience = {
+  id: number;
+  position: string; 
+  company: string;
+  start: Date;
+  end: Date;
+  points: Array<string>;
+  compnay_link: string;
+  technologies: string;
+}
+
+type Skill = {
+  title: string;
+  desc: string;
+}
+
+type Project = { 
+  id:number;
+  title: string;
+  keywords: string;
+  github:string|null;
+  manuscript:string|null;
+  points:Array<string>;
+}
+
 export const siteConfig: Config = {
   title: "Pranjal Rane",
   description: "Experienced Full Stack Software Engineer, with profound expertise in advanced cloud technologies specializing in scalable, production-grade software solutions with AI integration. Skilled in optimizing system efficiency and user engagement within both corporate and startup environments.",
@@ -24,11 +49,6 @@ export const siteConfig: Config = {
   }
 }
 
-/** 
-  These are you social media links. 
-  It uses https://github.com/natemoo-re/astro-icon#readme
-  You can find icons @ https://icones.js.org/
-*/
 export const socialLinks: Array<SocialLink> = [
   {
     icon: "mdi:github",
@@ -43,7 +63,7 @@ export const socialLinks: Array<SocialLink> = [
   {
     icon: "mdi:email",
     friendlyName: "email",
-    link: "mailto:rane.pr@northeastern.edu",
+    link: "mailto:pranjal.rane0207@gmail.com",
   }
 ];
 
@@ -66,12 +86,12 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   },
   {
     title: "Resume",
-    path: "https://drive.google.com/file/d/1Mk5d3NgTaQsCBzjD2-RZUxAqQ5DWLnkX/view?usp=sharing"
+    path: "https://drive.google.com/file/d/1thRyCp1SfLM69-FFuGi7P6Z0x_llgXkY/view?usp=sharing"
   }
 ];
 
 
-export const WORK_EXPERIENCE: Array<{ id:number, position: string; company: string, start: Date, end: Date, points: Array<string>, compnay_link:string }> = [
+export const WORK_EXPERIENCE: Array<WorkExperience> = [
 	// {
   //       id:1,
   //       position: "Data Scientist - Intern",
@@ -88,54 +108,56 @@ export const WORK_EXPERIENCE: Array<{ id:number, position: string; company: stri
   //       compnay_link: "https://www.cummins.com/support/digital-products-and-services-support"
   //   },
     {
-        id:2,
-        position: "Software Development Engineer - Intern",
-        company: "Cummins Inc.",
-        start: new Date("2023-05-01"),
-        // end: new Date("2023-08-31"),
-        end: new Date("2024-01-04"),
-        points: [
-          "Developed and deployed over 10 RESTful APIs using Java with Spring Boot, which enhanced application efficiency by 20% and supported scalable functionality in key web services",
-          "Developed custom middleware with Spring Boot to synchronize data between SQL-based legacy systems and Amazon DynamoDB, ensuring seamless data transfer and integration",
-          "Enhanced system scalability by 15% by integrating RabbitMQ with Spring Boot microservices for efficient asynchronous processing",
-          "Designed and implemented comprehensive unit and integration tests using JUnit and Mockito, covering edge cases, asynchronous operations, and API endpoint reliability, which successfully achieved code coverage of 95%",
-          "Improved frontend performance by implementing advanced React techniques (Redux & Hooks) and optimizing Typescript code"
-          
-        ],
-        compnay_link: "https://www.cummins.com/support/digital-products-and-services-support"
+      id: 2,
+      position: "Software Development Engineer - Intern",
+      company: "Cummins Inc.",
+      start: new Date("2023-05-01"),
+      // end: new Date("2023-08-31"),
+      end: new Date("2024-01-04"),
+      points: [
+        "Enhanced web service scalability and efficiency by 20% by developing and deploying various REST APIs using Java and Spring Boot",
+        "Ensured seamless data migration between legacy SQL system and Amazon DynamoDB by developing custom middleware in Java",
+        "Achieved 95% code coverage; improved API reliability by implementing comprehensive unit & integration tests with JUnit & Mockito",
+        "Optimized frontend performance by implementing advanced ReactJS techniques (Redux & Hooks) and optimizing Typescript code",
+      ],
+      compnay_link: "https://www.cummins.com/support/digital-products-and-services-support",
+      technologies: "Java, Spring Boot, Amazon Web Service, SQL, React, Git"
     },
     {
-        id:3,
-        position: "Software Development Engineer",
-        company: "Mindbody",
-        start: new Date("2023-09-01"),
-        end: new Date("2024-01-04"),
-        points: [
-            "Devised a proof of concept for a tool that allows over 50K customers to create static web pages, enhancing user engagement, by employing React JS, ASP.NET, and MongoDB",
-            "Developed RESTful APIs that improved data handling efficiency and scalability by optimizing interactions with MongoDB",
-            "Revamped the Booker software’s purchase experience UI, reducing payment checkout times by 9%, through the application of modern UX design principles such as minimalism and intuitive navigation and improved ReactJS components",
-            "Conducted rigorous usability and performance testing on the revamped UI using Jest for component testing and Selenium for end-to-end workflows, confirming the effectiveness of the updated ReactJS components and UX improvements"
-        ],
-        compnay_link: "https://co.mindbodyonline.com/"
+      id: 3,
+      position: "Software Development Engineer",
+      company: "Mindbody",
+      start: new Date("2023-09-01"),
+      end: new Date("2024-01-04"),
+      points: [
+        "Enhanced user engagement for 50K+ customers by developing a no-code tool to crearte static web pages using predefined templates",
+        "Improved data handling efficiency and scalability by optimizing MongoDB interactions through REST APIs using ASP.NET",
+        "Optimized system modularity, scalability and maintainability by decoupling a monolithic service into a microservice architecture",
+        "Reduced payment checkout time by 9% by revamping the website’s UI using modern UX principles & updated React components",
+        "Validated the effectiveness of UI updates by conducting rigorous component and end-to-end testing using Jest and Selenium",
+      ],
+      compnay_link: "https://co.mindbodyonline.com/",
+      technologies: "C#, ASP.NET, Typescript, React, MongoDB, AWS, Git"
     },
     {
-        id:4,
-        position: "Software Development Engineer",
-        company: "Solocl Technologies (now PolymathAI)",
-        start: new Date("2023-09-01"),
-        end: new Date("2024-01-04"),
-        points: [
-            "Developed the MVPs of two production-grade mobile applications in Flutter, successfully deploying them on Google Playstore",
-            "Enhanced login efficiency by 15% by implementing cloud based authentication and user session management techniques",
-            "Reduced latency by 20% by URL-based deep linking and database-driven pagination, enhancing navigation and data retrieval",
-            "Increased user revenue by 9% with payments API integration, enabling diverse payment options like cards and digital wallets"
-        ],
-        compnay_link: "https://trypolymath.ai/"
+      id: 4,
+      position: "Software Development Engineer",
+      company: "Solocl Technologies (now PolymathAI)",
+      start: new Date("2023-09-01"),
+      end: new Date("2024-01-04"),
+      points: [
+        "Developed the MVPs of two production-grade mobile applications in Flutter, successfully deploying them on the Google Playstore",
+        "Optimized user login efficiency by 15% by implementing improved cloud based authentication and session management techniques",
+        "Reduced latency by 20% through URL-based deep linking & database-driven pagination, enhancing app navigation and data retrieva",
+        "Enhanced system scalability by integrating RabbitMQ with Node.js microservices for efficient processing of asynchronous data",
+      ],
+      compnay_link: "https://trypolymath.ai/",
+      technologies: "Flutter, Node.js, Express.js, Google Cloud Platform, Git"
     }
 ];
 
 
-export const TECHNICAL_SKILLS: Array<{ title: string; desc: string }> = [
+export const TECHNICAL_SKILLS: Array<Skill> = [
 	{
 		title: "Programming Languages",
 		desc: "Java, Python, JavaScript, C/C++, C#, Dart (Flutter), HTML/CSS, PHP, SQL, Typescript",
@@ -170,7 +192,7 @@ export const TECHNICAL_SKILLS: Array<{ title: string; desc: string }> = [
 	}
 ];
 
-export const PROJECTS: Array<{ id:number, title: string; keywords: string, github:string|null, manuscript:string|null, points:Array<string> }> = [
+export const PROJECTS: Array<Project> = [
 	{
     id: 1,
     title: "StreamCraft - Video Streaming Service",
