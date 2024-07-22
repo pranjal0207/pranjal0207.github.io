@@ -86,10 +86,9 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   },
   {
     title: "Resume",
-    path: "https://drive.google.com/file/d/1thRyCp1SfLM69-FFuGi7P6Z0x_llgXkY/view?usp=sharing"
+    path: "https://drive.google.com/file/d/1YuxwgKwcKI3vDAmJhxxEt_CntKC_mVFo/view?usp=sharing"
   }
 ];
-
 
 export const WORK_EXPERIENCE: Array<WorkExperience> = [
 	// {
@@ -156,7 +155,6 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
     }
 ];
 
-
 export const TECHNICAL_SKILLS: Array<Skill> = [
 	{
 		title: "Programming Languages",
@@ -193,8 +191,23 @@ export const TECHNICAL_SKILLS: Array<Skill> = [
 ];
 
 export const PROJECTS: Array<Project> = [
-	{
+  {
     id: 1,
+    title: "Real-Time Document Collaboration Service",
+    keywords: "Go, gRPC, WebSocket, AWS, Docker, Protocol Buffers",
+    github: "https://github.com/pranjal0207/collaborative-doc-platform",
+    manuscript: null,
+    points: [
+      "Developed a real-time document editing platform with WebSocket communication for live updates and user synchronization",
+      "Implemented session management and document versioning, ensuring consistent data integrity across multiple users",
+      "Enhanced user experience by integrating gRPC and Protocol Buffers for efficient communication and DynamoDB for robust data storage",
+      "Utilized AWS EC2 for scalable deployment and Docker for containerization, ensuring high availability and portability of the service",
+      "Designed the system to handle concurrent user edits, minimizing conflicts and providing real-time conflict resolution",
+      "Improved document synchronization speed by 20% through optimized WebSocket handling and efficient data transmission protocols",
+    ]
+  },
+	{
+    id: 2,
     title: "StreamCraft - Video Streaming Service",
     keywords: "Javascript, AWS (S3, DynamoDB, Lamda, CloudFront), Kafka",
     github: "https://github.com/pranjal0207/stream-craft-client",
@@ -207,7 +220,7 @@ export const PROJECTS: Array<Project> = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Job Description Summarization Plugin",
     keywords: "Flask, Generative AI, Large Langauge Models, AWS",
     github: null,
@@ -220,7 +233,7 @@ export const PROJECTS: Array<Project> = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "CROWD - A Social Network Application",
     keywords: "MongoDB, Express.js, React, Node.js (MERN)",
     github: "https://github.com/pranjal0207/crowd",
@@ -233,7 +246,7 @@ export const PROJECTS: Array<Project> = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Stock Portfolio Management",
     keywords: "Java, MVC, SQL, Object-Oriented Programming & Design",
     github: "https://github.com/pranjal0207/portfolio-manager",
@@ -245,7 +258,7 @@ export const PROJECTS: Array<Project> = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Credit Worthiness of a Customer",
     keywords: "Self-supervised Machine Learning, Binary Classification Model",
     github: "https://github.com/pranjal0207/credit-worthiness-of-customer",
@@ -258,7 +271,7 @@ export const PROJECTS: Array<Project> = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Face Mask Detection and Face Recognition",
     keywords: "Computer Vision, Deep Learning",
     github: "https://github.com/TY-Project-Group/Web-based-system-for-face-mask-detection-and-face-recognition",
@@ -269,7 +282,7 @@ export const PROJECTS: Array<Project> = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "Tool for Automatic Question Generation",
     keywords: "Natural Language Processing, NLTK, SpaCy",
     github: "https://github.com/pranjal0207/Automatic-Question-Generator",
