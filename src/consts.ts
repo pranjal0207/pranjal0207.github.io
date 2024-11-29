@@ -96,7 +96,7 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
       id: 1,
       position: "Software Engineer",
       company: "Apple",
-      start: new Date("2023-09-01"),
+      start: new Date("2024-11-04"),
       end: new Date("2024-01-04"),
       points: [],
       compnay_link: "https://www.cummins.com/support/digital-products-and-services-support",
