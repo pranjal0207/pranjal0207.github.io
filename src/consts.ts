@@ -23,6 +23,7 @@ type WorkExperience = {
   points: Array<string>;
   compnay_link: string;
   technologies: string;
+  isPresent: boolean
 }
 
 type Skill = {
@@ -86,26 +87,22 @@ export const NAV_LINKS: Array<{ title: string, path: string }> = [
   },
   {
     title: "Resume",
-    path: "https://drive.google.com/file/d/1YuxwgKwcKI3vDAmJhxxEt_CntKC_mVFo/view?usp=sharing"
+    path: "https://drive.google.com/file/d/1Q4bpu82wdt7298aG6yDE3tvIDxEUjpHF/view?usp=sharing"
   }
 ];
 
 export const WORK_EXPERIENCE: Array<WorkExperience> = [
-	// {
-  //       id:1,
-  //       position: "Data Scientist - Intern",
-  //       company: "Cummins Inc.",
-  //       start: new Date("2023-09-01"),
-  //       end: new Date("2024-01-04"),
-  //       points: [
-  //           "Developed two Retrieval Augmented Generation (RAG) applications using Langchain, Cosmos DB and Llama and GPT (3.5 & 4); resulting in a 30% improvement in predictive accuracy for HR Chat bot and Global Warranty chat bot usecase",
-  //           "Designed and managed a data pipeline that processed and cleaned over 1TB of company data, leading to a 25% reduction in data processing time, by implementing data extraction and cleaning techniques like Text Normalization and Regex pattern matching",
-  //           "Achieved a 15% increase in RAG application efficiency, by prompt engineering and conducting a detailed comparative analysis of fine-tuned Llama and GPT-4 models and selecting the best-performing model for deployment",
-  //           "Streamlined model deployment and increased accessibility, by using MLflow to host the optimal RAG model and developing callable API with Databricks ML model deployment services",
-  //           "Addressed and resolved specific use-case limitations, enhancing retriever coverage by 40%, by designing and implementing a custom document retriever that outperformed the existing solution from Hugging Face in handling complex corner cases"
-  //       ],
-  //       compnay_link: "https://www.cummins.com/support/digital-products-and-services-support"
-  //   },
+	  {
+      id: 1,
+      position: "Software Engineer",
+      company: "Apple",
+      start: new Date("2023-09-01"),
+      end: new Date("2024-01-04"),
+      points: [],
+      compnay_link: "https://www.cummins.com/support/digital-products-and-services-support",
+      technologies: "Java, Spring Boot, Python, TigerGraph, Apache Kafka",
+      isPresent: true
+    },
     {
       id: 2,
       position: "Software Development Engineer - Intern",
@@ -120,7 +117,8 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
         "Optimized frontend performance by implementing advanced ReactJS techniques (Redux & Hooks) and optimizing Typescript code",
       ],
       compnay_link: "https://www.cummins.com/support/digital-products-and-services-support",
-      technologies: "Java, Spring Boot, Amazon Web Service, SQL, React, Git"
+      technologies: "Java, Spring Boot, Amazon Web Service, SQL, React, Git",
+      isPresent: false
     },
     {
       id: 3,
@@ -136,7 +134,8 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
         "Validated the effectiveness of UI updates by conducting rigorous component and end-to-end testing using Jest and Selenium",
       ],
       compnay_link: "https://co.mindbodyonline.com/",
-      technologies: "C#, ASP.NET, Typescript, React, MongoDB, AWS, Git"
+      technologies: "C#, ASP.NET, Typescript, React, MongoDB, AWS, Git",
+      isPresent: false
     },
     {
       id: 4,
@@ -151,7 +150,8 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
         "Enhanced system scalability by integrating RabbitMQ with Node.js microservices for efficient processing of asynchronous data",
       ],
       compnay_link: "https://trypolymath.ai/",
-      technologies: "Flutter, Node.js, Express.js, Google Cloud Platform, Git"
+      technologies: "Flutter, Node.js, Express.js, Google Cloud Platform, Git",
+      isPresent: false
     }
 ];
 
