@@ -99,7 +99,7 @@ export const WORK_EXPERIENCE: Array<WorkExperience> = [
       start: new Date("2024-11-04"),
       end: new Date("2024-01-04"),
       points: [],
-      compnay_link: "https://www.cummins.com/support/digital-products-and-services-support",
+      compnay_link: "https://www.apple.com/",
       technologies: "Java, Spring Boot, Python, TigerGraph, Apache Kafka",
       isPresent: true
     },
